@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第1回関西SA DJフェス｜9/25(金) ネイバーズ江坂 1st</title>
+  <meta name="description" content="第1回関西SA DJフェス。9/25(金) 19:00〜22:00、ネイバーズ江坂 1st。住む場所を越えて、音楽でつながろう。">
+  <meta property="og:title" content="第1回関西SA DJフェス">
+  <meta property="og:description" content="9/25(金) 19:00〜22:00 ネイバーズ江坂 1st／住む場所を越えて、音楽でつながろう。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/screensaver.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="saver saver--bg" data-saver data-saver-marquee="off" aria-hidden="true"></div>
+  <div class="veil" aria-hidden="true"></div>
+  <canvas class="fireworks" data-fireworks aria-hidden="true"></canvas>
+
+  <header class="bar">
+    <span class="bar__name">関西SA DJフェス</span>
+    <nav class="bar__nav">
+      <a href="#about">イベント</a>
+      <a href="#timetable">タイムテーブル</a>
+      <a href="#dj">DJ</a>
+      <a href="#info">開催情報</a>
+      <a class="bar__nav-saver" href="screensaver.html">スクリーンセーバー</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="hero__label">第1回</p>
+      <h1 class="hero__title">関西SA<br>DJフェス</h1>
+      <p class="hero__lead">住む場所を越えて、音楽でつながろう。</p>
+
+      <dl class="hero__facts">
+        <div>
+          <dt>日程</dt>
+          <dd>9/25(金)</dd>
+        </div>
+        <div>
+          <dt>時間</dt>
+          <dd>19:00〜22:00</dd>
+        </div>
+        <div>
+          <dt>場所</dt>
+          <dd>ネイバーズ江坂 1st</dd>
+        </div>
+      </dl>
+
+      <div class="countdown" data-countdown
+        data-countdown-start="2026-09-25T19:00:00+09:00"
+        data-countdown-end="2026-09-25T22:00:00+09:00">
+        <div class="countdown__timer" data-countdown-timer>
+          <div class="countdown__slot"><strong data-countdown-days>-</strong><span>日</span></div>
+          <div class="countdown__slot"><strong data-countdown-hours>--</strong><span>時間</span></div>
+          <div class="countdown__slot"><strong data-countdown-minutes>--</strong><span>分</span></div>
+          <div class="countdown__slot"><strong data-countdown-seconds>--</strong><span>秒</span></div>
+          <p class="countdown__note">開演まで</p>
+        </div>
+
+        <div class="countdown__panel" data-countdown-live hidden>
+          <p class="countdown__badge">開催中</p>
+          <p class="countdown__now" data-countdown-current>ネイバーズ江坂 1st でお待ちしています</p>
+        </div>
+
+        <div class="countdown__panel" data-countdown-done hidden>
+          <p class="countdown__badge countdown__badge--done">第1回、ありがとうございました</p>
+          <p class="countdown__now">住む場所を越えて、音楽でつながろう。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="about" data-reveal>
+      <h2 class="block__head">イベントについて</h2>
+      <p>関西のソーシャルアパートメント（SA）をつなぐ DJ イベント。記念すべき第1回の舞台はネイバーズ江坂。</p>
+      <p>SA に住んでいる人も、住んでいない人も大歓迎。普段なかなか交流することのない関西の SA 同士が、音楽を通してつながる夜。</p>
+      <ul class="tags">
+        <li>DJが好き</li>
+        <li>音楽が好き</li>
+        <li>SAの人と交流したい</li>
+        <li>ちょっと雰囲気を楽しんでみたい</li>
+      </ul>
+      <p>そんな方はぜひ遊びに来てください。</p>
+    </section>
+
+    <section class="block" id="timetable" data-reveal>
+      <h2 class="block__head">タイムテーブル</h2>
+      <p class="block__note">19:00〜22:00 の3時間。DJ は30分ずつ、交互に2回まわします。枠を押すと詳細が開きます。</p>
+
+      <div class="tt">
+        <div class="tt__head tt__head--time">TIME</div>
+        <div class="tt__head tt__head--dj">DJブース</div>
+        <div class="tt__head tt__head--floor">フロア</div>
+
+        <span class="tt__time" style="--row: 2">19:00</span>
+        <span class="tt__time" style="--row: 3">19:30</span>
+        <span class="tt__time" style="--row: 4">20:00</span>
+        <span class="tt__time" style="--row: 5">20:30</span>
+        <span class="tt__time" style="--row: 6">21:00</span>
+        <span class="tt__time" style="--row: 7">21:30</span>
+
+        <button class="tt__cell tt__cell--warm" type="button" data-slot-stage="dj" style="--col: 2; --row: 2; --span: 1" data-slot
+          data-slot-time="19:00〜19:30"
+          data-slot-title="ウォームアップ"
+          data-slot-by="BGM／30分"
+          data-slot-desc="入場開始。音は軽めにかけています。ドリンクを持って、まずはフロアで顔合わせ。">
+          <span class="tt__title">ウォームアップ</span>
+          <span class="tt__by">BGM</span>
+        </button>
+
+        <button class="tt__cell tt__cell--george" type="button" data-slot-stage="dj" style="--col: 2; --row: 3; --span: 1" data-slot
+          data-slot-time="19:30〜20:00"
+          data-slot-title="DJ George"
+          data-slot-by="1本目／30分"
+          data-slot-img="https://placehold.jp/24/ff3d6e/ffffff/640x360.png?text=DJ%20George"
+          data-slot-desc="世界のクラブ100選にも選ばれた、梅田ピカデリーのメインステージでDJを経験。1本目からフロアを開けていきます。">
+          <span class="tt__title">DJ George</span>
+          <span class="tt__by">1本目・30分</span>
+        </button>
+
+        <button class="tt__cell tt__cell--genji" type="button" data-slot-stage="dj" style="--col: 2; --row: 4; --span: 1" data-slot
+          data-slot-time="20:00〜20:30"
+          data-slot-title="DJ GENJI"
+          data-slot-by="1本目／30分"
+          data-slot-img="https://placehold.jp/24/00a5c8/ffffff/640x360.png?text=DJ%20GENJI"
+          data-slot-desc="新大阪SAから参戦。関西のSAをつなぐ1本目。フロアの温度をそのまま上げていきます。">
+          <span class="tt__title">DJ GENJI</span>
+          <span class="tt__by">1本目・30分</span>
+        </button>
+
+        <button class="tt__cell tt__cell--george" type="button" data-slot-stage="dj" style="--col: 2; --row: 5; --span: 1" data-slot
+          data-slot-time="20:30〜21:00"
+          data-slot-title="DJ George"
+          data-slot-by="2本目／30分"
+          data-slot-img="https://placehold.jp/24/ff3d6e/ffffff/640x360.png?text=DJ%20George"
+          data-slot-desc="2本目。フロアが温まったところで、もう一段上げていきます。">
+          <span class="tt__title">DJ George</span>
+          <span class="tt__by">2本目・30分</span>
+        </button>
+
+        <button class="tt__cell tt__cell--genji" type="button" data-slot-stage="dj" style="--col: 2; --row: 6; --span: 1" data-slot
+          data-slot-time="21:00〜21:30"
+          data-slot-title="DJ GENJI"
+          data-slot-by="2本目／30分"
+          data-slot-img="https://placehold.jp/24/00a5c8/ffffff/640x360.png?text=DJ%20GENJI"
+          data-slot-desc="2本目。ラスト前のピークをつくる30分。">
+          <span class="tt__title">DJ GENJI</span>
+          <span class="tt__by">2本目・30分</span>
+        </button>
+
+        <button class="tt__cell tt__cell--b2b" type="button" data-slot-stage="dj" style="--col: 2; --row: 7; --span: 1" data-slot
+          data-slot-time="21:30〜22:00"
+          data-slot-title="2人まわし"
+          data-slot-by="DJ George × DJ GENJI／30分"
+          data-slot-desc="最後は2人で交互にプレイ。かけてほしい曲があれば、この時間にブースで声をかけてください。">
+          <span class="tt__title">2人まわし</span>
+          <span class="tt__by">George × GENJI</span>
+        </button>
+
+        <button class="tt__cell tt__cell--floor" type="button" style="--col: 3; --row: 2; --span: 2" data-slot
+          data-slot-time="19:00〜20:00"
+          data-slot-title="受付・自己紹介"
+          data-slot-by="フロア／60分"
+          data-slot-desc="入口で受付。名前と住んでいるSAを書いて、近くの人から話してみてください。">
+          <span class="tt__title">受付・自己紹介</span>
+          <span class="tt__by">どのSAから来た？</span>
+        </button>
+
+        <button class="tt__cell tt__cell--floor" type="button" style="--col: 3; --row: 4; --span: 3" data-slot
+          data-slot-time="20:00〜21:30"
+          data-slot-title="交流＆リクエスト受付"
+          data-slot-by="フロア／90分"
+          data-slot-desc="踊っても、話していてもOK。ラストの2人まわしでかけてほしい曲は、この時間に受け付けます。">
+          <span class="tt__title">交流＆リクエスト受付</span>
+          <span class="tt__by">踊っても話してもOK</span>
+        </button>
+
+        <button class="tt__cell tt__cell--photo" type="button" style="--col: 3; --row: 7; --span: 1" data-slot
+          data-slot-time="21:30〜22:00"
+          data-slot-title="記念撮影"
+          data-slot-by="フロア／ラスト"
+          data-slot-desc="最後の1曲のあと、集まって記念撮影。第1回の記録として残します。">
+          <span class="tt__title">記念撮影</span>
+          <span class="tt__by">ラストの1曲のあと</span>
+        </button>
+      </div>
+      <p class="tt__foot">22:00 終了</p>
+    </section>
+
+    <section class="block" id="dj" data-reveal>
+      <h2 class="block__head">DJ</h2>
+      <div class="djs">
+        <article class="dj">
+          <img src="https://placehold.jp/24/ff3d6e/ffffff/640x420.png?text=DJ%20George" alt="DJ George" width="640" height="420" loading="lazy">
+          <h3>DJ George</h3>
+          <p>世界のクラブ100選にも選ばれた、梅田ピカデリーのメインステージでDJを経験。</p>
+        </article>
+        <article class="dj">
+          <img src="https://placehold.jp/24/00a5c8/ffffff/640x420.png?text=DJ%20GENJI" alt="DJ GENJI" width="640" height="420" loading="lazy">
+          <h3>DJ GENJI</h3>
+          <p>新大阪SAから参戦。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="info" data-reveal>
+      <h2 class="block__head">開催情報</h2>
+      <table class="info">
+        <tbody>
+          <tr>
+            <th scope="row">イベント名</th>
+            <td>第1回関西SA DJフェス</td>
+          </tr>
+          <tr>
+            <th scope="row">日程</th>
+            <td>9/25(金)</td>
+          </tr>
+          <tr>
+            <th scope="row">時間</th>
+            <td>19:00〜22:00</td>
+          </tr>
+          <tr>
+            <th scope="row">場所</th>
+            <td>ネイバーズ江坂 1st</td>
+          </tr>
+        </tbody>
+      </table>
+      <img class="info__image" src="https://placehold.jp/20/ffc300/241a12/960x480.png?text=%E3%83%8D%E3%82%A4%E3%83%90%E3%83%BC%E3%82%BA%E6%B1%9F%E5%9D%82%201st" alt="ネイバーズ江坂 1st の会場イメージ" width="960" height="480" loading="lazy">
+    </section>
+  </main>
+
+  <div class="crowd" aria-hidden="true">
+    <svg viewBox="0 0 1200 212" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <!-- 乾杯（コップを上げる） -->
+        <g id="sit-cheer-short">
+          <rect x="-19" y="-6" width="15" height="66" rx="7" fill="var(--pants, #2b3a55)"></rect>
+          <rect x="4" y="-6" width="15" height="66" rx="7" fill="var(--pants, #2b3a55)"></rect>
+          <rect x="-22" y="54" width="19" height="12" rx="5" fill="var(--shoe, #1b2436)"></rect>
+          <rect x="3" y="54" width="19" height="12" rx="5" fill="var(--shoe, #1b2436)"></rect>
+          <path d="M-22 -50 Q-22 -61 -10 -63 L10 -63 Q22 -61 22 -50 L24 0 Q0 6 -24 0 Z" fill="var(--shirt, #ff3d6e)"></path>
+          <path d="M-16 -50 L-25 -22" stroke="var(--shirt, #ff3d6e)" stroke-width="10" stroke-linecap="round" fill="none"></path>
+          <path d="M16 -51 L30 -74" stroke="var(--shirt, #ff3d6e)" stroke-width="10" stroke-linecap="round" fill="none"></path>
+          <circle cx="-26" cy="-20" r="5.5" fill="var(--skin, #f6d3b4)"></circle>
+          <circle cx="31" cy="-76" r="5.5" fill="var(--skin, #f6d3b4)"></circle>
+          <path d="M25 -97 L40 -97 L38 -80 L27 -80 Z" fill="var(--cup, #ffcf5a)"></path>
+          <rect x="24" y="-100" width="17" height="4" rx="2" fill="#fffdf4" opacity="0.9"></rect>
+          <rect x="-5" y="-69" width="10" height="9" fill="var(--skin, #f6d3b4)"></rect>
+          <circle cx="0" cy="-80" r="15" fill="var(--skin, #f6d3b4)"></circle>
+          <path d="M-15 -83 Q-14 -98 0 -98 Q14 -98 15 -83 Q8 -92 0 -92 Q-8 -92 -15 -83 Z" fill="var(--hair, #241a12)"></path>
+          <circle cx="-5.5" cy="-81" r="1.8" fill="#241a12"></circle>
+          <circle cx="5.5" cy="-81" r="1.8" fill="#241a12"></circle>
+          <path d="M-4.5 -75 Q0 -70 4.5 -75" stroke="#241a12" stroke-width="2" stroke-linecap="round" fill="none"></path>
+        </g>
+
+        <!-- 乾杯（ロングヘア） -->
+        <g id="sit-cheer-long">
+          <rect x="-19" y="-6" width="15" height="66" rx="7" fill="var(--pants, #3f5a78)"></rect>
+          <rect x="4" y="-6" width="15" height="66" rx="7" fill="var(--pants, #3f5a78)"></rect>
+          <rect x="-22" y="54" width="19" height="12" rx="5" fill="var(--shoe, #1b2436)"></rect>
+          <rect x="3" y="54" width="19" height="12" rx="5" fill="var(--shoe, #1b2436)"></rect>
+          <path d="M-23 -50 Q-23 -61 -10 -63 L10 -63 Q23 -61 23 -50 L26 0 Q0 6 -26 0 Z" fill="var(--shirt, #ffb3c7)"></path>
+          <path d="M-16 -50 L-25 -22" stroke="var(--shirt, #ffb3c7)" stroke-width="10" stroke-linecap="round" fill="none"></path>
+          <path d="M16 -51 L30 -74" stroke="var(--shirt, #ffb3c7)" stroke-width="10" stroke-linecap="round" fill="none"></path>
+          <circle cx="-26" cy="-20" r="5.5" fill="var(--skin, #f9ddc4)"></circle>
+          <circle cx="31" cy="-76" r="5.5" fill="var(--skin, #f9ddc4)"></circle>
+          <path d="M25 -97 L40 -97 L38 -80 L27 -80 Z" fill="var(--cup, #d8456b)"></path>
+          <rect x="24" y="-100" width="17" height="4" rx="2" fill="#fffdf4" opacity="0.9"></rect>
+          <rect x="-5" y="-69" width="10" height="9" fill="var(--skin, #f9ddc4)"></rect>
+          <circle cx="0" cy="-80" r="15" fill="var(--skin, #f9ddc4)"></circle>
+          <path d="M-16 -80 Q-18 -100 0 -100 Q18 -100 16 -80 L18 -56 Q11 -63 11 -84 Q6 -92 0 -92 Q-6 -92 -11 -84 Q-11 -63 -18 -56 Z" fill="var(--hair, #2e1d12)"></path>
+          <circle cx="-5.5" cy="-81" r="1.8" fill="#241a12"></circle>
+          <circle cx="5.5" cy="-81" r="1.8" fill="#241a12"></circle>
+          <path d="M-4.5 -75 Q0 -70 4.5 -75" stroke="#241a12" stroke-width="2" stroke-linecap="round" fill="none"></path>
+        </g>
+
+        <!-- 手元で飲む・話す -->
+        <g id="sit-talk">
+          <rect x="-19" y="-6" width="15" height="66" rx="7" fill="var(--pants, #33313a)"></rect>
+          <rect x="4" y="-6" width="15" height="66" rx="7" fill="var(--pants, #33313a)"></rect>
+          <rect x="-22" y="54" width="19" height="12" rx="5" fill="var(--shoe, #1b2436)"></rect>
+          <rect x="3" y="54" width="19" height="12" rx="5" fill="var(--shoe, #1b2436)"></rect>
+          <path d="M-22 -50 Q-22 -61 -10 -63 L10 -63 Q22 -61 22 -50 L24 0 Q0 6 -24 0 Z" fill="var(--shirt, #9ad33f)"></path>
+          <path d="M-16 -50 L-20 -26" stroke="var(--shirt, #9ad33f)" stroke-width="10" stroke-linecap="round" fill="none"></path>
+          <path d="M16 -50 L13 -26" stroke="var(--shirt, #9ad33f)" stroke-width="10" stroke-linecap="round" fill="none"></path>
+          <path d="M-8 -40 L10 -40 L8 -22 L-6 -22 Z" fill="var(--cup, #56d8ff)"></path>
+          <rect x="-9" y="-43" width="20" height="4" rx="2" fill="#fffdf4" opacity="0.9"></rect>
+          <circle cx="-21" cy="-24" r="5.5" fill="var(--skin, #e8b48c)"></circle>
+          <circle cx="14" cy="-24" r="5.5" fill="var(--skin, #e8b48c)"></circle>
+          <rect x="-5" y="-69" width="10" height="9" fill="var(--skin, #e8b48c)"></rect>
+          <circle cx="0" cy="-80" r="15" fill="var(--skin, #e8b48c)"></circle>
+          <path d="M-15 -83 Q-14 -99 0 -99 Q15 -99 15 -82 Q6 -93 -4 -90 Q-11 -88 -15 -83 Z" fill="var(--hair, #1f1a17)"></path>
+          <circle cx="-5.5" cy="-81" r="1.8" fill="#241a12"></circle>
+          <circle cx="5.5" cy="-81" r="1.8" fill="#241a12"></circle>
+          <path d="M-4.5 -75 Q0 -70 4.5 -75" stroke="#241a12" stroke-width="2" stroke-linecap="round" fill="none"></path>
+        </g>
+
+        <!-- 足元の瓶 -->
+        <g id="bottle">
+          <rect x="-3" y="-34" width="6" height="11" rx="2" fill="var(--glass, #7a9e5b)"></rect>
+          <path d="M-8 -24 Q-8 -20 -9 -16 L-9 0 L9 0 L9 -16 Q8 -20 8 -24 Z" fill="var(--glass, #7a9e5b)"></path>
+          <rect x="-9" y="-13" width="18" height="7" fill="#fffdf4" opacity="0.85"></rect>
+        </g>
+      </defs>
+
+      <!-- 座っている縁（フッターと同じ色） -->
+      <rect x="0" y="140" width="1200" height="72" fill="var(--yellow)"></rect>
+      <rect x="0" y="140" width="1200" height="3" fill="var(--ink)"></rect>
+
+      <use href="#sit-cheer-long" transform="translate(118 140)"
+        style="--shirt: #ff7aa8; --hair: #2e1d12; --skin: #f9ddc4; --pants: #3f5a78; --cup: #ffcf5a"></use>
+      <use href="#sit-cheer-short" transform="translate(244 140) scale(-1, 1)"
+        style="--shirt: #00b8de; --hair: #241a12; --skin: #e8b48c; --pants: #2b3a55; --cup: #ffcf5a"></use>
+      <use href="#bottle" transform="translate(310 140) scale(1.05)" style="--glass: #7a9e5b"></use>
+      <use href="#sit-talk" transform="translate(396 140) scale(1.04)"
+        style="--shirt: #ffd23f; --hair: #1f1a17; --skin: #c98b63; --pants: #33313a; --cup: #56d8ff"></use>
+      <use href="#sit-cheer-long" transform="translate(524 140) scale(-1, 1)"
+        style="--shirt: #c14bff; --hair: #3b2a1a; --skin: #f6d3b4; --pants: #2b3a55; --cup: #d8456b"></use>
+      <use href="#sit-cheer-short" transform="translate(648 140) scale(0.97)"
+        style="--shirt: #ff5a36; --hair: #1b1b1b; --skin: #f9ddc4; --pants: #3f5a78; --cup: #ffcf5a"></use>
+      <use href="#bottle" transform="translate(714 140)" style="--glass: #b4763f"></use>
+      <use href="#sit-talk" transform="translate(800 140) scale(-1, 1)"
+        style="--shirt: #9ad33f; --hair: #2e1d12; --skin: #e8b48c; --pants: #33313a; --cup: #ffcf5a"></use>
+      <use href="#sit-cheer-long" transform="translate(936 140) scale(1.02)"
+        style="--shirt: #56d8ff; --hair: #241a12; --skin: #f6d3b4; --pants: #3f5a78; --cup: #d8456b"></use>
+      <use href="#sit-cheer-short" transform="translate(1066 140) scale(-1, 1)"
+        style="--shirt: #fff2c4; --hair: #3b2a1a; --skin: #c98b63; --pants: #2b3a55; --cup: #56d8ff"></use>
+      <use href="#bottle" transform="translate(1132 140) scale(0.95)" style="--glass: #7a9e5b"></use>
+    </svg>
+  </div>
+
+  <footer class="foot">
+    <p class="foot__title">第1回関西SA DJフェス</p>
+    <p>9/25(金) 19:00〜22:00／ネイバーズ江坂 1st</p>
+    <p class="foot__lead">住む場所を越えて、音楽でつながろう。</p>
+  </footer>
+
+  <div class="modal" data-modal hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__sheet" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal__close" type="button" data-modal-close aria-label="閉じる">×</button>
+      <p class="modal__time" data-modal-time></p>
+      <h3 class="modal__title" id="modal-title" data-modal-title></h3>
+      <p class="modal__by" data-modal-by></p>
+      <div class="modal__photo" data-modal-photo hidden>
+        <img src="" alt="" data-modal-image>
+      </div>
+      <p class="modal__desc" data-modal-desc></p>
+    </div>
+  </div>
+
+  <script src="js/screensaver.js"></script>
+  <script src="js/fireworks.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

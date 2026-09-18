@@ -1,0 +1,171 @@
+.saver {
+  --saver-accent: #ff3d6e;
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background-color: #0b1026;
+  background-image:
+    radial-gradient(circle at 18% 16%, rgba(255, 61, 110, 0.3), transparent 46%),
+    radial-gradient(circle at 84% 74%, rgba(0, 184, 222, 0.28), transparent 48%),
+    radial-gradient(circle at 52% 108%, rgba(255, 195, 0, 0.22), transparent 42%),
+    radial-gradient(rgba(255, 255, 255, 0.55) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+  background-size: auto, auto, auto, 47px 43px, 73px 61px;
+  background-position: 0 0, 0 0, 0 0, 0 0, 19px 24px;
+}
+
+/* 中秋の月 */
+.saver::before {
+  content: '';
+  position: absolute;
+  top: clamp(46px, 10vh, 96px);
+  right: clamp(24px, 8vw, 116px);
+  width: clamp(88px, 13vw, 148px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 63% 68%, rgba(226, 212, 168, 0.4) 0 7%, transparent 8%),
+    radial-gradient(circle at 40% 46%, rgba(226, 212, 168, 0.34) 0 5%, transparent 6%),
+    radial-gradient(circle at 52% 26%, rgba(226, 212, 168, 0.28) 0 4%, transparent 5%),
+    radial-gradient(circle at 36% 30%, #ffffff, #fff8dc 54%, #ffe9a0);
+  box-shadow:
+    0 0 28px rgba(255, 252, 235, 0.95),
+    0 0 80px rgba(255, 240, 180, 0.7),
+    0 0 180px rgba(255, 228, 140, 0.45),
+    0 0 320px rgba(255, 220, 120, 0.22);
+}
+
+.saver__card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: min(340px, 78vw);
+  padding: 20px 22px 18px;
+  border: 3px solid #241a12;
+  border-radius: 18px;
+  background: #fffcf4;
+  box-shadow: 8px 8px 0 var(--saver-accent);
+  will-change: transform;
+  transition: box-shadow 0.3s;
+}
+
+.saver__card--still {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.saver__label {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 3px 14px;
+  border: 2px solid #241a12;
+  border-radius: 999px;
+  background: var(--saver-accent);
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  transition: background 0.3s;
+}
+
+.saver__title {
+  display: block;
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: clamp(30px, 7vw, 44px);
+  line-height: 1.1;
+  color: #fffcf4;
+  -webkit-text-stroke: 3px #241a12;
+  text-shadow: 4px 4px 0 var(--saver-accent);
+  transition: text-shadow 0.3s;
+}
+
+.saver__date {
+  display: block;
+  margin-top: 14px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  color: #241a12;
+}
+
+.saver__place {
+  display: block;
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(36, 26, 18, 0.66);
+}
+
+.saver__marquee {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 9px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  background: #ffc300;
+  z-index: 2;
+}
+
+.saver__marquee--top {
+  top: 0;
+  border-bottom: 3px solid #241a12;
+}
+
+.saver__marquee--bottom {
+  bottom: 0;
+  border-top: 3px solid #241a12;
+  background: #ff3d6e;
+}
+
+.saver__marquee-inner {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  color: #241a12;
+}
+
+.saver__marquee--bottom .saver__marquee-inner {
+  color: #fff;
+}
+
+.saver__marquee--top .saver__marquee-inner {
+  animation: saver-scroll-left 46s linear infinite;
+}
+
+.saver__marquee--bottom .saver__marquee-inner {
+  animation: saver-scroll-right 46s linear infinite;
+}
+
+.saver__marquee-text.is-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px currentColor;
+}
+
+.saver__marquee--top .saver__marquee-text.is-outline {
+  -webkit-text-stroke-color: #241a12;
+}
+
+.saver__marquee--bottom .saver__marquee-text.is-outline {
+  -webkit-text-stroke-color: #fff;
+}
+
+@keyframes saver-scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes saver-scroll-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .saver__marquee-inner {
+    animation: none;
+  }
+}
