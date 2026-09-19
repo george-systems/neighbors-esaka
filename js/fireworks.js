@@ -9,6 +9,7 @@
   var FRICTION = 0.986;
   var MAX_SPARKS = 2200;
   var MAX_ROCKETS = 7;
+  var GLYPHS = ['♪', '♫', '♬', '♩'];
 
   function pick(list) {
     return list[Math.floor(Math.random() * list.length)];
@@ -18,6 +19,7 @@
     var ctx = canvas.getContext('2d');
     var rockets = [];
     var sparks = [];
+    var notes = [];
     var width = 0;
     var height = 0;
     var nextLaunch = 0;
@@ -64,9 +66,37 @@
       }
     }
 
+    function noteBurst(x, y, color) {
+      var count = width < 620 ? 5 : 8;
+
+      for (var i = 0; i < count; i += 1) {
+        var angle = (Math.PI * 2 * i) / count + Math.random() * 0.4;
+        var speed = 1.4 + Math.random() * 2.2;
+        notes.push({
+          x: x,
+          y: y,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          life: 1,
+          decay: 0.005 + Math.random() * 0.005,
+          size: 18 + Math.random() * 16,
+          angle: (Math.random() - 0.5) * 0.6,
+          spin: (Math.random() - 0.5) * 0.06,
+          glyph: pick(GLYPHS),
+          color: color
+        });
+      }
+    }
+
     function explode(rocket) {
       var base = width < 620 ? 62 : 104;
       var mixed = Math.random() < 0.45;
+
+      if (Math.random() < 0.34) {
+        ring(rocket.x, rocket.y, rocket.color, Math.round(base * 0.45), 0.6, mixed);
+        noteBurst(rocket.x, rocket.y, rocket.color);
+        return;
+      }
 
       ring(rocket.x, rocket.y, rocket.color, base, 1, mixed);
 
@@ -132,8 +162,35 @@
         ctx.stroke();
       }
 
-      ctx.globalAlpha = 1;
       ctx.globalCompositeOperation = 'source-over';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+
+      for (var k = notes.length - 1; k >= 0; k -= 1) {
+        var note = notes[k];
+        note.vx *= 0.99;
+        note.vy = note.vy * 0.99 + GRAVITY * 0.7;
+        note.x += note.vx;
+        note.y += note.vy;
+        note.angle += note.spin;
+        note.life -= note.decay;
+
+        if (note.life <= 0) {
+          notes.splice(k, 1);
+          continue;
+        }
+
+        ctx.globalAlpha = Math.min(note.life * 1.4, 1);
+        ctx.fillStyle = note.color;
+        ctx.font = note.size + "px 'Noto Sans JP', sans-serif";
+        ctx.save();
+        ctx.translate(note.x, note.y);
+        ctx.rotate(note.angle);
+        ctx.fillText(note.glyph, 0, 0);
+        ctx.restore();
+      }
+
+      ctx.globalAlpha = 1;
       window.requestAnimationFrame(frame);
     }
 
