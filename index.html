@@ -23,9 +23,11 @@
     <span class="bar__name">関西SA DJフェス</span>
     <nav class="bar__nav">
       <a href="#about">イベント</a>
+      <a href="#highlights">当日の目玉</a>
       <a href="#please">当日お願い</a>
       <a href="#timetable">タイムテーブル</a>
       <a href="#dj">DJ</a>
+      <a href="#staff">運営</a>
       <a href="#info">開催情報</a>
       <a class="bar__nav-saver" href="screensaver.html">スクリーンセーバー</a>
     </nav>
@@ -88,6 +90,32 @@
       <p>そんな方はぜひ遊びに来てください。</p>
     </section>
 
+    <section class="block" id="highlights" data-reveal>
+      <h2 class="block__head">当日の目玉</h2>
+      <p class="block__note">音楽だけじゃない。飲みものとまかないも、当日の主役です。</p>
+      <div class="highlights">
+        <article class="highlight">
+          <img class="highlight__icon" data-photo="ume" src="https://placehold.jp/24/ff3d6e/ffffff/240x240.png?text=%E6%A2%85%E9%85%92" alt="後藤のほまれ（梅酒）" width="240" height="240" loading="lazy">
+          <p class="highlight__label">特別提供</p>
+          <h3>和歌山産 最高級地酒<br>後藤のほまれ（梅酒）</h3>
+          <ul>
+            <li>モンドセレクションエサカ 金賞受賞</li>
+            <li>グッドデザインエサカ賞受賞</li>
+            <li>内閣総理大臣エサカ賞受賞</li>
+          </ul>
+        </article>
+        <article class="highlight highlight--food">
+          <img class="highlight__icon" data-photo="makanai" src="https://placehold.jp/20/9ad33f/241a12/240x240.png?text=%E5%BD%93%E6%97%A5%E3%81%AE%E4%B8%80%E7%9A%BF" alt="Stevenがつくる当日の一皿" width="240" height="240" loading="lazy">
+          <p class="highlight__label">総料理長の一皿</p>
+          <h3>ヒルトンホテルエサカ総料理長<br>Stevenのまかない</h3>
+          <ul>
+            <li>世界の頂きにたった男が見た料理とは</li>
+            <li>神の手が織り成す芸術的な逸品</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
     <section class="block" id="please" data-reveal>
       <h2 class="block__head">当日お願い</h2>
       <p class="block__note">みんなでルールを守って、音楽でつながる夜にしましょう。</p>
@@ -145,8 +173,8 @@
           data-slot-time="19:30〜20:00"
           data-slot-title="DJ George"
           data-slot-by="1本目／30分"
-          data-slot-img="https://placehold.jp/24/ff3d6e/ffffff/640x360.png?text=DJ%20George"
-          data-slot-desc="世界のクラブ100選にも選ばれた、梅田ピカデリーのメインステージでDJを経験。1本目からフロアを開けていきます。">
+          data-slot-photo="george"
+          data-slot-desc="世界のクラブ100選にも選ばれた、梅田ピカデリーのメインでDJを経験。1本目からフロアを開けていきます。">
           <span class="tt__title">DJ George</span>
           <span class="tt__by">1本目・30分</span>
         </button>
@@ -155,7 +183,7 @@
           data-slot-time="20:00〜20:30"
           data-slot-title="DJ GENJI"
           data-slot-by="1本目／30分"
-          data-slot-img="https://placehold.jp/24/00a5c8/ffffff/640x360.png?text=DJ%20GENJI"
+          data-slot-photo="genji"
           data-slot-desc="新大阪SAから参戦。関西のSAをつなぐ1本目。フロアの温度をそのまま上げていきます。">
           <span class="tt__title">DJ GENJI</span>
           <span class="tt__by">1本目・30分</span>
@@ -165,7 +193,7 @@
           data-slot-time="20:30〜21:00"
           data-slot-title="DJ George"
           data-slot-by="2本目／30分"
-          data-slot-img="https://placehold.jp/24/ff3d6e/ffffff/640x360.png?text=DJ%20George"
+          data-slot-photo="george"
           data-slot-desc="2本目。フロアが温まったところで、もう一段上げていきます。">
           <span class="tt__title">DJ George</span>
           <span class="tt__by">2本目・30分</span>
@@ -175,7 +203,7 @@
           data-slot-time="21:00〜21:30"
           data-slot-title="DJ GENJI"
           data-slot-by="2本目／30分"
-          data-slot-img="https://placehold.jp/24/00a5c8/ffffff/640x360.png?text=DJ%20GENJI"
+          data-slot-photo="genji"
           data-slot-desc="2本目。ラスト前のピークをつくる30分。">
           <span class="tt__title">DJ GENJI</span>
           <span class="tt__by">2本目・30分</span>
@@ -194,7 +222,7 @@
           data-slot-time="19:00〜20:00"
           data-slot-title="受付・自己紹介"
           data-slot-by="フロア／60分"
-          data-slot-desc="入口で受付。名前と住んでいるSAを書いて、近くの人から話してみてください。">
+          data-slot-desc="近くの人から話してみてください。">
           <span class="tt__title">受付・自己紹介</span>
           <span class="tt__by">どのSAから来た？</span>
         </button>
@@ -224,16 +252,53 @@
       <h2 class="block__head">DJ</h2>
       <div class="djs">
         <article class="dj">
-          <img src="https://placehold.jp/24/ff3d6e/ffffff/640x420.png?text=DJ%20George" alt="DJ George" width="640" height="420" loading="lazy">
+          <img data-photo="george" src="https://placehold.jp/24/ff3d6e/ffffff/640x420.png?text=DJ%20George" alt="DJ George" width="640" height="420" loading="lazy">
           <h3>DJ George</h3>
-          <p>世界のクラブ100選にも選ばれた、梅田ピカデリーのメインステージでDJを経験。</p>
+          <p>世界のクラブ100選にも選ばれた、梅田ピカデリーのメインでDJを経験。</p>
+          <p>朝早く起床できない自分に絶望し、夜遅くまで夜更かしをした怠惰な自分に葛藤しつづけたこの一年。数々の苦難を乗り越えた先に見えたDJとしての彼の答えとは、、、</p>
+          <p>彼は言った「音楽で語れることは音のみだ」</p>
         </article>
         <article class="dj">
-          <img src="https://placehold.jp/24/00a5c8/ffffff/640x420.png?text=DJ%20GENJI" alt="DJ GENJI" width="640" height="420" loading="lazy">
+          <img data-photo="genji" src="https://placehold.jp/24/00a5c8/ffffff/640x420.png?text=DJ%20GENJI" alt="DJ GENJI" width="640" height="420" loading="lazy">
           <h3>DJ GENJI</h3>
-          <p>新大阪SAから参戦。</p>
+          <p class="dj__role">空間の魔術師／新大阪SAから参戦</p>
+          <p class="dj__award">SAルームフォトコンテスト 特別賞受賞</p>
+          <p>受賞作のテーマは【余白。】。家具はあえて低く、床はたっぷり空けて、グリーンを効かせる。リラックスと開放感が同時に成立する部屋で、審査員をうなずかせた一枚です。</p>
+          <p>余白があるほど音は気持ちよく回る。本人いわく「セットリスト作成も編集も捗る部屋」。その部屋で組み上げた選曲を、そのままネイバーズ江坂のフロアへ持ち込みます。</p>
         </article>
       </div>
+    </section>
+
+    <section class="block" id="staff" data-reveal>
+      <h2 class="block__head">運営</h2>
+      <p class="block__note">第1回を支えるメンバーです。</p>
+      <ul class="staff">
+        <li class="staff__card">
+          <span class="staff__icon" aria-hidden="true">🎪</span>
+          <span class="staff__role">オーガナイザー/広報</span>
+          <strong>emi</strong>
+        </li>
+        <li class="staff__card">
+          <span class="staff__icon" aria-hidden="true">🍳</span>
+          <span class="staff__role">調理</span>
+          <strong>Steven</strong>
+        </li>
+        <li class="staff__card">
+          <span class="staff__icon" aria-hidden="true">🍰</span>
+          <span class="staff__role">デザート</span>
+          <strong>masumi</strong>
+        </li>
+        <li class="staff__card">
+          <span class="staff__icon" aria-hidden="true">💰</span>
+          <span class="staff__role">会計</span>
+          <strong>sinya</strong>
+        </li>
+        <li class="staff__card">
+          <span class="staff__icon" aria-hidden="true">🕺</span>
+          <span class="staff__role">盛り上げ</span>
+          <strong>goto</strong>
+        </li>
+      </ul>
     </section>
 
     <section class="block" id="info" data-reveal>
@@ -258,7 +323,7 @@
           </tr>
         </tbody>
       </table>
-      <img class="info__image" src="https://placehold.jp/20/ffc300/241a12/960x480.png?text=%E3%83%8D%E3%82%A4%E3%83%90%E3%83%BC%E3%82%BA%E6%B1%9F%E5%9D%82%201st" alt="ネイバーズ江坂 1st の会場イメージ" width="960" height="480" loading="lazy">
+      <img class="info__image" src="./img/esaka1st-stage.jpg" alt="ネイバーズ江坂 1st の会場イメージ" width="960" height="480" loading="lazy">
     </section>
   </main>
 

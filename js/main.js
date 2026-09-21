@@ -6,6 +6,18 @@
      URL でも可: index.html?now=2026-09-25T20:10#info （? は # より前） */
   var TEST_NOW = '';
 
+  /* 写真はここだけ直す。HTML には data-photo / data-slot-photo のキーを書く。
+     署名付き S3 URL は数分で切れるので、ファイルを img/ に置いて相対パスを書く。
+     george: https://placehold.jp/24/ff3d6e/ffffff/640x420.png?text=DJ%20George
+     genji: https://placehold.jp/24/00a5c8/ffffff/640x360.png?text=DJ%20GENJI
+  */
+  var PHOTOS = {
+    george: './img/IMG_6877.PNG',
+    genji: './img/IMG_8693.JPG',
+    ume: 'https://placehold.jp/24/ff3d6e/ffffff/240x240.png?text=%E6%A2%85%E9%85%92',
+    makanai: 'https://placehold.jp/20/9ad33f/241a12/240x240.png?text=%E5%BD%93%E6%97%A5%E3%81%AE%E4%B8%80%E7%9A%BF'
+  };
+
   function pad(value) {
     return value < 10 ? '0' + value : String(value);
   }
@@ -188,7 +200,22 @@
     });
   }
 
+  function applyPhotos() {
+    var imgs = document.querySelectorAll('[data-photo]');
+    for (var i = 0; i < imgs.length; i += 1) {
+      var src = PHOTOS[imgs[i].getAttribute('data-photo')];
+      if (src) imgs[i].src = src;
+    }
+
+    var slots = document.querySelectorAll('[data-slot-photo]');
+    for (var j = 0; j < slots.length; j += 1) {
+      var slotSrc = PHOTOS[slots[j].getAttribute('data-slot-photo')];
+      if (slotSrc) slots[j].setAttribute('data-slot-img', slotSrc);
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
+    applyPhotos();
     var countdown = document.querySelector('[data-countdown]');
     if (countdown) setupCountdown(countdown);
     showTestClock();
