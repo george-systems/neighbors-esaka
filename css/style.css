@@ -668,7 +668,7 @@ main,
 
 .rings__card--pink { box-shadow: 6px 6px 0 #ff3d6e; }
 .rings__card--blue { box-shadow: 6px 6px 0 #3ad0ff; }
-.rings__card--yellow { box-shadow: 6px 6px 0 #ffe14a; }
+.rings__card--green { box-shadow: 6px 6px 0 #7cff3a; }
 
 .rings__icon {
   display: grid;
@@ -698,9 +698,9 @@ main,
   filter: drop-shadow(0 0 5px #3ad0ff);
 }
 
-.rings__card--yellow .rings__band {
-  stroke: #ffe14a;
-  filter: drop-shadow(0 0 5px #ffd21a);
+.rings__card--green .rings__band {
+  stroke: #7cff3a;
+  filter: drop-shadow(0 0 5px #7cff3a);
 }
 
 .rings__card h3 {
@@ -712,7 +712,7 @@ main,
 
 .rings__card--pink h3 { color: #e0126a; }
 .rings__card--blue h3 { color: #0490b6; }
-.rings__card--yellow h3 { color: #b88600; }
+.rings__card--green h3 { color: #2e8a12; }
 
 .rings__card p {
   font-size: 13.5px;
